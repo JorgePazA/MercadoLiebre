@@ -13,7 +13,14 @@
     <header class="main-header">
         <div class=main-header-top-bar>
             <img class="logo" src="static/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-            <input class="Search-bar" type="text" placeholder="Buscar productos, marcas y más">
+            <form action="#" class="search-section">
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="Buscar productos, marcas y más"
+                />
+            </form>
             <a href="#" class="button-search">
                 <i class="fas fa-search"></i>
             </a>
@@ -41,90 +48,102 @@
             </div>
         </nav>
     </header>
-
-    <main>  
-            <form action="/create-user" method="POST">
-                <div class="container">
-                    <input type="text" name="nombres" placeholder="Nombre y Apellido" minlength="2" required>
-                </div>
-                <div class="container">
-                    <input type="text" name="usuario" placeholder="Nombre de usuario" minlength="2" required>
-                </div>
-                <div class="container">
-                    <input type="email" name="email" placeholder="E-mail" required>
-                </div>
-                <div class="container">
-                    <label class="title">
-                        Fecha de nacimiento
-                    </label>
-                    <input type="date" name="fecha" required>
-                </div>
-                <div class="container">
-                    <input type="text" name="domicilio" placeholder="Domicilio" required>
-                </div>
-                <div class="container">
-                    <label class="title">
-                        Perfil de usuario
-                    </label>
-                    <div class="radio-button">
-                        <div>
-                            <input type="radio" name="perfil" value="vendedor" required>
-                            <label>Vendedor </label>
-                        </div>
-                        <div>
-                            <input type="radio" name="perfil" value="comprador" required>
-                            <label>Comprador </label>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="container">
-                    <label class="title">
-                        Intereses
-                    </label>
-                    <div class="check-button">
-                        <p>
-                            <input type="checkbox" name="intereses" value="electro">
-                            <label>Electro</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="intereses" value="moda">
-                            <label>Moda </label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="intereses" value="hogar">
-                            <label>Hogar</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="intereses" value="jugueteria">
-                            <label>Jugueteria </label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="intereses" value="vida-sana">
-                            <label>Vida Sana </label>
-                        </p>
-                    </div>
-                </div>
-                <div class="container">
-                    <label class="title">
-                        Foto de usuario
-                    </label>
-                    <input type="file" name="avatar" accept=".jpg .png" required>
-                </div>
-                <div class="container">
-                    <input type="password" id="password" placeholder="Contraseña" minlength="8" required>
-                </div>
-                <div class="container">
-                    <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
-                </div>
-                <div class="container">
-                    <div class="buttons">
-                        <button type="submit">Enviar</button>
-                        <button type="reset">Borrar</button>
-                    </div>
-                </div>
-            </form>
-    </main>
+    <main class="form-section">
+        <form action="/" class="form-container">
+          <label for="nombre-apellido">Nombres y apellidos</label>
+          <input
+            type="text"
+            name="nombre-apellido"
+            id="nombre-apellido"
+            min="1"
+          />
+  
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" name="usuario" id="usuario" min="1" />
+  
+          <label for="nacimiento">Fecha de nacimiento</label>
+          <input type="date" name="nacimiento" id="nacimiento" />
+  
+          <label for="domicilio">Domicilio</label>
+          <input
+            type="text"
+            name="domicilio"
+            id="domicilio"
+            placeholder="direccion de residencia"
+            min="1"
+          />
+          <p>Perfil del usuario:</p>
+          <div class="checkbox-radio-inputs">
+            <label
+              ><input
+                type="radio"
+                name="perfil-usuario"
+                value="comprar"
+              />comprar</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="perfil-usuario"
+                value="vender"
+              />vender</label
+            >
+          </div>
+  
+          <p>Categorias de interes:</p>
+          <div class="checkbox-radio-inputs">
+            <label
+              ><input
+                type="checkbox"
+                name="categoria-1"
+                value="electro"
+              />Electro</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="categoria-2"
+                value="moda"
+              />Moda</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="categoria-3"
+                value="hogar"
+              />Hogar</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="categoria-4"
+                value="jugueteria"
+              />Jugueteria</label
+            >
+            <label
+              ><input type="checkbox" name="categoria-5" value="vida-sana" />Vida
+              sana</label
+            >
+          </div>
+  
+          <label for="foto">Foto de usuario</label>
+          <input type="file" name="foto" id="foto" accept=".jpg,.png." />
+  
+          <label for="contraseña">Contraseña</label>
+          <input type="password" name="contraseña" id="contraseña" required />
+  
+          <label for="contraseña-val">Confirmar contraseña</label>
+          <input
+            type="password"
+            name="contraseña-val"
+            id="contraseña-val"
+            required
+          />
+  
+          <button type="submit" class="form-btn">Enviar</button>
+          <button type="reset" class="form-btn">Borrar</button>
+        </form>
+      </main>
     <footer>
         <section class="target">
             <i class="fas fa-credit-card"></i>

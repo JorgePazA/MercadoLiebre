@@ -13,7 +13,14 @@
     <header class="main-header">
         <div class=main-header-top-bar>
             <img class="logo" src="static/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-            <input class="Search-bar" type="text" placeholder="Buscar productos, marcas y más">
+            <form action="#" class="search-section">
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="Buscar productos, marcas y más"
+                />
+            </form>
             <a href="#" class="button-search">
                 <i class="fas fa-search"></i>
             </a>
@@ -41,19 +48,16 @@
             </div>
         </nav>
     </header>
-    <main> 
-            <form action="/" method="GET">
-                <div class="container">
-                    <input type="text" name="user" placeholder="Nombre de usuario" required>
-                </div>
-                <div class="container">
-                    <input type="text" name="password" placeholder="Contraseña" required>
-                </div>
-                <div class="container">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form> 
-    </main>
+    <main class="login-section">
+        <form action="" class="login-container">
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" name="usuario" id="usuario" />
+  
+          <label for="contraseña">Contraseña</label>
+          <input type="password" name="contraseña" id="contraseña" required />
+          <button type="submit" class="form-btn">Ingresar</button>
+        </form>
+      </main>
     <footer>
         <section class="target">
             <i class="fas fa-credit-card"></i>

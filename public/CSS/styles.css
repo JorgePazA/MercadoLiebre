@@ -147,24 +147,74 @@ body{
     flex-grow: 0.7;
 }
 
-main form{
-    width: 100vw;
-    padding: 30px 0px 10px 0px;
-    text-align: center;
-}
-main .container {
-    margin-bottom: 25px;
-    font-size: 13px;
-}
-main form input, button{
+.form-section {
     width: 80%;
-    border-radius: 5px
-}
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .form-container,
+  .login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container label,
+  .form-container p,
+  .login-container label {
+    margin: 8px 0;
+  }
+  
+  .form-container p {
+    font-weight: bold;
+  }
+  
+  .form-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .checkbox-radio-inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .form-btn {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #1259c3;
+    color: #fff;
+    background: #1259c3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .form-btn:hover {
+    color: #1259c3;
+    background: transparent;
+  }
+  
+  .login-section {
+    width: 80%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .login-container input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
 
-main form button{
-    background-color: #1259C3;
-    color: white;
-}
 /* Footer */
 /* ------------------------------------------------------------------------------------------------- */
 footer{
