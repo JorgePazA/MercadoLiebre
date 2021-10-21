@@ -10,43 +10,38 @@
     <title>Register</title>
 </head>
 <body>
-    <header class="main-header">
-        <div class=main-header-top-bar>
-            <img class="logo" src="static/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-            <form action="#" class="search-section">
-                <input
-                  type="search"
-                  name="search"
-                  id="search"
-                  placeholder="Buscar productos, marcas y más"
-                />
-            </form>
-            <a href="#" class="button-search">
-                <i class="fas fa-search"></i>
-            </a>
-            <p class="copy-header"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+  <header class="main-header">
+    <div class="content">
+        <div class="top-bar">
+            <div class="top-up">
+                <a href="/">
+                    <img src="static/images/logo-mercado-liebre.svg" class="logo" alt="Aquí debería haber un logo">
+                </a>
+                <form action="#" class="search">
+                    <input type="search" name="search" class="search-bar" placeholder="Buscar productos, marcas y más">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <h2><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</h2>
         </div>
-        
-        <a href="#" class="burger-button">
-            <i class="fas fa-bars"></i>
-        </a>          
-        <nav class="main-nav-bar">
-            <div class=izq>
-                <ul class="left-navbar">
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Tiendas Oficiales</a></li>
-                    <li><a href="#">Vender</a></li>
-                    <li><a href="#">Ayuda</a></li>
+        <nav class="nav-bar">
+                <ul class="left-nav-bar">
+                    <li><a href="#"> Ofertas</a></li>
+                    <li><a href="#"> Tiendas Oficiales</a></li>
+                    <li><a href="#"> Vender</a></li>
+                    <li><a href="#"> Ayuda</a></li>
                 </ul>
-            </div>
-            <div class="der">
-                <ul class="right-navbar">
-                    <li><a href="/register">Creá tu cuenta <i class="fas fa-id-card"></i></a></li>
-                    <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-                    <li><a href="#">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
+                <ul class="right-nav-bar">
+                    <li><a href="/register"> Creá tu cuenta </a><i class="far fa-address-card"></i></li>
+                    <li><a href="/login"> Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="#"> Mis compras </a><i class="fas fa-shopping-basket"></i></li>
                 </ul>
-            </div>
         </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
     </header>
     <main class="form-section">
         <form action="/" class="form-container">
@@ -57,13 +52,10 @@
             id="nombre-apellido"
             min="1"
           />
-  
           <label for="usuario">Nombre de usuario</label>
           <input type="text" name="usuario" id="usuario" min="1" />
-  
           <label for="nacimiento">Fecha de nacimiento</label>
           <input type="date" name="nacimiento" id="nacimiento" />
-  
           <label for="domicilio">Domicilio</label>
           <input
             type="text"
@@ -73,7 +65,7 @@
             min="1"
           />
           <p>Perfil del usuario:</p>
-          <div class="checkbox-radio-inputs">
+          <div class="radio-inputs">
             <label
               ><input
                 type="radio"
@@ -91,7 +83,7 @@
           </div>
   
           <p>Categorias de interes:</p>
-          <div class="checkbox-radio-inputs">
+          <div class="checkbox-inputs">
             <label
               ><input
                 type="checkbox"
