@@ -243,8 +243,16 @@ body{
     color: #39b54a;
     width: 60%;
   }
-  .main-main .main-body .main-article .article-cards .caracteristics-article .descripcion {
-    display: none;
+  .main-main article .descripcion {
+    font-size: 16px;
+    color: #666;
+    display:block;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 300ms;
+  }
+  .main-main article:hover .descripcion{
+    opacity: 1;
   }
 /*------------------------------------ Version Tablet ---------------------------------------- */
 
@@ -274,9 +282,6 @@ body{
         color: #666;
         margin-top: 15px;
       }
-      .main-main .main-body .main-article .article-cards .caracteristics-article .for-pay .off {
-        padding-left: 8px;
-    }
 }
 
 /*------------------------------------ Version desktop ---------------------------------------- */
@@ -361,8 +366,8 @@ body{
   }
   
   .form-btn:hover {
-    color: #1259c3;
-    background: transparent;
+    color: white;
+    background: #0022AA;
   }
   
   .login-section {
@@ -402,6 +407,28 @@ footer .target p{
     color: gray;
     font-size: 12px;
 }
+/*------------------------------------ Version desktop ---------------------------------------- */
+@media (min-width: 769px){
+
+    footer .tarjetas{
+        display: flex;
+    }
+    footer .tarjetas section{
+        width: 33%;
+    }
+    footer .target p{
+        width: 75%;
+        color: gray;
+        font-size: 10px;
+    }
+    footer .target i:hover{
+        color: #eac926;
+    }
+
+}
+
+
+
 
 /*------------------------------------ Version desktop ---------------------------------------- */
 
